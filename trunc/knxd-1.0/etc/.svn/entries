@@ -1,0 +1,40 @@
+10
+
+dir
+2011
+svn://svn.code.sf.net/p/openautomation/code/tools/knxd/trunc/knxd-0.1/etc
+svn://svn.code.sf.net/p/openautomation/code
+
+
+
+2013-09-08T16:12:11.434574Z
+1882
+jumi2006
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b3ce15a5-05c3-4bc8-b6eb-98bdc3a999cb
+
+logrotate.d
+dir
+
+default
+dir
+
+knxd
+dir
+
+init.d
+dir
+
