@@ -1,8 +1,0 @@
-usr/sbin
-usr/lib/perl5
-etc/knxd
-etc/knxd/plugin
-etc/knxd/tools
-etc/default
-etc/init.d
-etc/logrotate.d
