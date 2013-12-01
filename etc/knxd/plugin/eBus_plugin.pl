@@ -65,6 +65,7 @@ foreach my $set(@sets){
 }
 
 foreach my $set(@sets){
+    if (defined $msg{'apci'}){
     if ($msg{'apci'} eq "A_GroupValue_Write" && $msg{'dst'} eq $set->{ga}){
         $msg{'value'} = decode_dpt($msg{'dst'},$msg{'data'},$set->{dpt}); # make eibga.conf useless
         my $send_set = $set->{type}." ".$set->{short}." ".$msg{'value'} ;
@@ -88,7 +89,7 @@ foreach my $set(@sets){
                 last;
 			}}
         last;
-	}
+	}}
 }
 
 ##Response
@@ -96,6 +97,7 @@ foreach my $set(@sets){
 ## No surprise ... ists to slow ... but working
 foreach my $get (@gets){
     $plugin_subscribe_read{$get->{ga}}{$plugname} = 1;
+    if (defined $msg{'apci'}){
     if ($msg{'apci'} eq "A_GroupValue_Read" && $msg{'dst'} eq $get->{ga}){
         plugin_log($plugname,"Response $msg{'apci'}");
         my $send_get = $get->{type}." ".$get->{short};
@@ -109,7 +111,7 @@ foreach my $get (@gets){
             if ($answer =~ m/^[-+]?\d+(?:\.\d*)?(?:[eE][-+]?\d+(?:\.\d*)?)?$/ ) # check if $answer ist any number
             {knx_write($get->{ga},$answer,$get->{dpt},0x40)}
         }
-    }}
+    }}}
 
 #### GET ###
 
