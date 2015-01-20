@@ -1,1 +1,1 @@
-Renamed and moved to https://github.com/JuMi2006/knxd/yawgd/
+Renamed and moved to https://github.com/JuMi2006/yawgd/
